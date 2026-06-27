@@ -61,26 +61,37 @@ bulk/
 │   ├── 06_deseq2_analysis.R     # Differential expression
 │   └── 07_make_figures.R        # Publication-ready plots
 │
-├── data/                        # Raw FASTQ.GZ reads (generated)
-├── ref/                         # Reference files & Salmon index (generated)
-├── reports/                     # Quantification & DE analysis (generated)
-├── figures/                     # Publication-ready plots (generated)
+├── report/                      # Validation report & key tables
+│   ├── reproduction_report.md   # Scientific validation report
+│   └── results/                 # Key DESeq2 result tables (CSV)
+│
+├── figures/                     # Tracked publication-ready plots (PNG/PDF)
+│
+├── paper/                       # Original reference publication (PDF)
+│   └── 1-s2.0-S2352340922003912-main.pdf
+│
+├── data/                        # [Local Symlink] Raw FASTQ.GZ reads (generated)
+├── ref/                         # [Local Symlink] Reference files & Salmon index (generated)
+├── results/                     # [Local Symlink] Full intermediate outputs
 │
 ├── environment.yml              # Conda environment specification
 ├── run_all.sh                   # Master pipeline runner
-├── reproduction_report.md       # Scientific validation report
 └── README.md
 ```
 
 ### Directory Details
 
-| Directory | Contents | Size | Generated? |
+| Directory | Contents | Size | Tracked in Git? |
 |---|---|---|---|
-| `config/` | Metadata & design matrices | <1 MB | No |
-| `data/` | Raw FASTQ.GZ reads (6 samples) | ~4 GB | Yes |
-| `ref/` | Ensembl GRCh38 + Salmon index | ~6 GB | Yes |
-| `reports/` | Salmon quants, DESeq2 tables | ~200 MB | Yes |
-| `figures/` | Publication plots (PNG/PDF) | ~10 MB | Yes |
+| `config/` | Metadata & design matrices | <1 MB | Yes |
+| `scripts/` | Pipeline bash and R scripts | <100 KB | Yes |
+| `report/` | Scientific report & key result CSVs | ~2 MB | Yes |
+| `figures/` | Static publication plots (PNG/PDF) | ~1.5 MB | Yes |
+| `paper/` | Original reference paper PDF | ~1.5 MB | Yes |
+| `data/` | Raw FASTQ.GZ reads (6 samples) | ~3.1 GB | No (Local Symlink) |
+| `ref/` | Ensembl GRCh38 + Salmon index | ~6 GB | No (Local Symlink) |
+| `results/` | Full Salmon outputs & DESeq2 objects | ~200 MB | No (Local Symlink) |
+
 
 ---
 

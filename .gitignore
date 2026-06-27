@@ -1,8 +1,8 @@
 # Ignore large sequence datasets and index directories
-/data/
-/ref/
-/results/
-/figures/
+/data
+/ref
+/results
+/figures
 
 # Ignore execution logs and SRA download caches
 *.log
