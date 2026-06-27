@@ -129,17 +129,17 @@ The upregulation bias is biologically consistent: loss of both m⁶A erasers cau
 ### Figures
 
 #### PCA Plot — Sample Segregation by Genotype
-![PCA plot showing clean separation of WT and DKO samples](figures/fig1_pca.png)
+![PCA plot showing clean separation of WT and DKO samples](img/fig1_pca.png)
 
 PC1 (33.9% variance) cleanly separates WT from DKO. Replicates cluster tightly within each group with no batch effects.
 
 #### Volcano Plot — Genome-Wide Differential Expression
-![Volcano plot of DKO vs WT differential expression](figures/fig2_volcano.png)
+![Volcano plot of DKO vs WT differential expression](img/fig2_volcano.png)
 
 Apeglm-shrunk log₂ fold changes vs. −log₁₀(padj). Top DEGs are labeled. The distribution shows a clear upregulation bias consistent with m⁶A-mediated transcript stabilization.
 
 #### Heatmap — Top 50 Most Variable Genes
-![Heatmap of top 50 most variable genes with hierarchical clustering](figures/fig3_heatmap.png)
+![Heatmap of top 50 most variable genes with hierarchical clustering](img/fig3_heatmap.png)
 
 Row-wise z-scored VST expression values. Hierarchical clustering perfectly partitions the 6 samples into WT and DKO branches.
 
