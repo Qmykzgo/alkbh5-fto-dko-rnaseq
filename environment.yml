@@ -1,0 +1,28 @@
+name: rnaseq_reproduction
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # ── Data retrieval ──
+  - sra-tools=3.1.1
+  # ── Quality control ──
+  - fastqc>=0.12
+  - multiqc>=1.35
+  # ── Quantification ──
+  - salmon=1.10.3
+  - pigz
+  # ── R base + Bioconductor ──
+  - r-base>=4.5
+  - bioconductor-deseq2=1.50.2
+  - bioconductor-tximport=1.38.2
+  - bioconductor-apeglm=1.32.0
+  # ── R / CRAN plotting & data wrangling ──
+  - r-ggplot2>=4.0
+  - r-ggrepel>=0.9
+  - r-pheatmap>=1.0
+  - r-rcolorbrewer>=1.1
+  - r-readr>=2.2
+  - r-dplyr>=1.2
+  - r-tibble>=3.3
+  - r-jsonlite>=2.0

@@ -1,0 +1,24 @@
+# Ignore large sequence datasets and index directories
+data/
+ref/
+results/
+figures/
+
+# Ignore execution logs and SRA download caches
+*.log
+.sra/
+sra/
+prefetch/
+
+# Ignore R environment history and workspace files
+.Rhistory
+.RData
+.Rproj.user/
+.RDataTmp
+.Rapp.history
+.RDataY
+
+# System metadata
+.DS_Store
+Thumbs.db
+*Zone.Identifier
