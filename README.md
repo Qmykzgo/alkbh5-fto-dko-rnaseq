@@ -39,7 +39,7 @@ conda activate alkbh5-rnaseq
 bash run_all.sh
 ```
 
-Results appear in `results/` and figures in `figures/`.
+Results appear in `reports/` and figures in `figures/`.
 
 ---
 
@@ -63,7 +63,7 @@ bulk/
 │
 ├── data/                        # Raw FASTQ.GZ reads (generated)
 ├── ref/                         # Reference files & Salmon index (generated)
-├── results/                     # Quantification & DE tables (generated)
+├── reports/                     # Quantification & DE analysis (generated)
 ├── figures/                     # Publication-ready plots (generated)
 │
 ├── environment.yml              # Conda environment specification
@@ -79,7 +79,7 @@ bulk/
 | `config/` | Metadata & design matrices | <1 MB | No |
 | `data/` | Raw FASTQ.GZ reads (6 samples) | ~4 GB | Yes |
 | `ref/` | Ensembl GRCh38 + Salmon index | ~6 GB | Yes |
-| `results/` | Salmon quants, DESeq2 tables | ~200 MB | Yes |
+| `reports/` | Salmon quants, DESeq2 tables | ~200 MB | Yes |
 | `figures/` | Publication plots (PNG/PDF) | ~10 MB | Yes |
 
 ---
@@ -195,17 +195,17 @@ export KEEP_SRA_CACHE=1 bash run_all.sh
 ### Key Figures
 
 #### Figure 1: PCA Plot
-![PCA by Genotype](img/fig1_pca.png)
+![PCA by Genotype](figures/fig1_pca.png)
 
 PC1 (33.9% variance) cleanly separates WT from DKO samples. Replicates cluster tightly with no batch effects.
 
 #### Figure 2: Volcano Plot
-![Volcano: DKO vs WT](img/fig2_volcano.png)
+![Volcano: DKO vs WT](figures/fig2_volcano.png)
 
 Apeglm-shrunk log₂FC vs. −log₁₀(padj). Top 10 genes labeled. Clear upregulation bias consistent with m⁶A-driven stabilization.
 
 #### Figure 3: Heatmap
-![Top 50 Variable Genes](img/fig3_heatmap.png)
+![Top 50 Variable Genes](figures/fig3_heatmap.png)
 
 Row-wise z-scored VST-normalized counts. Hierarchical clustering perfectly partitions samples by genotype.
 
@@ -267,8 +267,8 @@ bash 04_build_salmon_index.sh
 
 This typically indicates failed offset estimation. Check:
 ```bash
-# Re-examine per-sample mapping rates in results/mapping_summary.txt
-cat ../results/quant_summary.txt
+# Re-examine per-sample mapping rates in reports/mapping_summary.txt
+cat ../reports/quant_summary.txt
 ```
 
 ### Stage 7: Missing fonts in PDF output
