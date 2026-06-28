@@ -306,8 +306,7 @@ If you use this pipeline, please cite:
 ---
 
 ## License
-
-[Add your license here — e.g., MIT, GPL-3.0, CC-BY-4.0]
+LICENSE 
 
 ## Contact
 
